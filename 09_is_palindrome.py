@@ -21,7 +21,6 @@ def is_palindrome(phrase):
         >>> is_palindrome('Noon')
         True
     """
-    phrase2 = phrase.replace(" ","")
-    reversed_phrase = phrase2[::-1]
+    phrase_no_spaces = phrase.lower().replace(" ","")
 
-    return phrase2.lower() == reversed_phrase.lower()
+    return phrase_no_spaces == phrase_no_spaces[::-1]
